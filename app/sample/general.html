@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/angular/1.7.5/angular.min.js"></script>
+    <script src="../lib/angular/1.7.5/angular-route.min.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<div ng-app="myApp">
+    <div ng-controller="UserCtrl">
+        <p class="username">Welcome, {{ user.details.username }}</p>
+        <p class="id">User ID: {{ user.details.id }}</p>
+    </div>
+</div>
+
+
+<script>
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('UserCtrl', ['$scope', function ($scope) {
+
+        // user details라는 네임스페이스를 사용하자. DOM에서 알아보기도 좋을 것이다.
+        $scope.user = {};
+        $scope.user.details = {
+            "username": "Todd Motto",
+            "id": "89101112"
+        };
+
+    }]);
+</script>
+</body>
+</html>
