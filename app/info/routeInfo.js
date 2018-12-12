@@ -24,11 +24,11 @@ app.controller('routeFilesCtrl', ['$scope', function ($scope) {
         '}');
     $scope.routeFiles = data.result;
 
-    // $scope.click = function(id) {
-    //     console.log(id);
-    //     $("#nav-link active").class('nav-link');
-    //     console.log($("#nav-link active"));
-    // }
+    //라우터 파일 선택시(nav-link) 이벤트
+    $scope.routeFileNameClick = function($event) {
+        angular.element('#v-pills-tab a').attr('class', 'nav-link');
+        $event.preventDefault();
+    }
 
 }]);
 
@@ -36,18 +36,6 @@ app.controller('RouteInfoCtrl', [function () {
 
 }]);
 
-
-/**
- * 라우터 파일 선택시(nav-link) 이벤트
- */
-$('div').on('click', 'a', function (e) {
-
-    $('#v-pills-tab a').each(function () {
-        console.log($(this).attr('class', 'nav-link'));
-    })
-
-    e.preventDefault()
-});
 
 
 /////////////////////////////////////
