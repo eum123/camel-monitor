@@ -295,3 +295,27 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [selenium]: http://docs.seleniumhq.org/
 [travis]: https://travis-ci.org/
 [travis-docs]: https://docs.travis-ci.com/user/getting-started
+
+
+
+## package
+아래 내용 설치 
+```
+npm install bootstrap   //현재는 외부링크로 설정
+npm i -S jquery
+npm i -S popper.js
+npm install --save bootstrap@3.3.7 font-awesome // 현재는 외부링크로 설정.
+```
+
+참고사항
+``` 
+http://ralf79.tistory.com/706
+font-awesome 추가 : https://medium.com/@santhoshveer/add-bootstrap-framework-and-font-awesome-icon-on-angularjs-4f25c4d4aa07, https://www.npmjs.com/package/angular-font-awesome
+```
+
+## 오류내용
+오류 내용 정의
+```
+오류내용 예제
+```
+
