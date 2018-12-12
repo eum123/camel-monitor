@@ -14,6 +14,9 @@ var app = angular.module('app', [
             templateUrl: 'info/routeInfo.html'
             // controller: navMenuController
         })
+        .when('/routeConfig', {
+            templateUrl: 'config/routeConfig.html'
+        })
         .otherwise({redirectTo: '/'});
 }]);
 
