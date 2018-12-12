@@ -49,15 +49,16 @@ app.filter('getFileName', function(){
 
 $('div').on('click', 'a', function (e) {
 
-    $(".navbar-link").each(function() {
-        $(this).addClass("active");
+    $(".nav-link").each(function() {
+      //  $(this).removeClass();
+        console.log($(this));
     });
 
     //console.log($('div').children('.nav-link active'));
 
     //console.log(this.parentNode.childNodes);
 
-    console.log(e);
+    //console.log(e);
 
     // $('div').children('a').forEach(function(value, index, array1) {
     //     value.tab('hide');
