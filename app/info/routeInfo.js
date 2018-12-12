@@ -25,9 +25,13 @@ app.controller('routeFilesCtrl', ['$scope', function ($scope) {
     $scope.routeFiles = data.result;
 
     //라우터 파일 선택시(nav-link) 이벤트
-    $scope.routeFileNameClick = function($event) {
+    $scope.routeFileNameClick = function($event, fileName) {
         angular.element('#v-pills-tab a').attr('class', 'nav-link');
         $event.preventDefault();
+
+        console.log(fileName);
+
+        window.location.href = './index.html#!/routeConfig?fileName=' + fileName;
     }
 
 }]);
