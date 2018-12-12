@@ -8,6 +8,9 @@ var app = angular.module('app', [
 
     $routeProvider
         .when('/', {
+            templateUrl: 'home/home.html'
+        })
+        .when('/routeInfo', {
             templateUrl: 'info/routeInfo.html'
             // controller: navMenuController
         })

@@ -32,15 +32,55 @@ app.controller('routeFilesCtrl', ['$scope', function ($scope) {
 
 }]);
 
-app.controller('RouteInfoCtrl', [function () {
+app.controller('routeStatisticCtrl', ['$scope', function ($scope) {
+    var routeData = JSON.parse('{\n' +
+        '  "result_code": "OK",\n' +
+        '  "result_message": "정상",\n' +
+        '  "result": [\n' +
+        '    {\n' +
+        '      "fileName": "/work/manjin/project/camel-launcher/src/test/resources/conf/route/process.xml",\n' +
+        '      "routeId": "process",\n' +
+        '      "startTimestamp": "2018-12-12 12:02:32",\n' +
+        '      "exchangesTotal": 173,\n' +
+        '      "exchangesFailed": 0,\n' +
+        '      "exchangesInflight": 0,\n' +
+        '      "lastProcessingTime": 1,\n' +
+        '      "minProcessingTime": 0,\n' +
+        '      "maxProcessingTime": 10,\n' +
+        '      "uptimeMills": 864255,\n' +
+        '      "description": "description.... 처음에 있어야함",\n' +
+        '      "state": "Started"\n' +
+        '    },\n' +
+        '    {\n' +
+        '      "fileName": "/work/manjin/project/camel-launcher/src/test/resources/conf/route/process1.xml",\n' +
+        '      "routeId": "process",\n' +
+        '      "startTimestamp": "2018-12-12 12:02:32",\n' +
+        '      "exchangesTotal": 173,\n' +
+        '      "exchangesFailed": 0,\n' +
+        '      "exchangesInflight": 0,\n' +
+        '      "lastProcessingTime": 1,\n' +
+        '      "minProcessingTime": 0,\n' +
+        '      "maxProcessingTime": 10,\n' +
+        '      "uptimeMills": 864255,\n' +
+        '      "description": "description.... 처음에 있어야함",\n' +
+        '      "state": "Started"\n' +
+        '    }\n' +
+        '  ]\n' +
+        '}');
 
+    $scope.routeStatistic = routeData.result;
 }]);
+
+/////////////////////////////////////
+////  service
+/////////////////////////////////////
+
 
 
 
 /////////////////////////////////////
 ////  filter
-////////////////////////////////////
+/////////////////////////////////////
 app.filter('getFileName', function () {
     return function (input) {
         if (input.indexOf('/') >= 0) {
