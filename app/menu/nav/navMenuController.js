@@ -1,3 +1,0 @@
-function navMenuController($scope, $routeParams) {
-
-}
